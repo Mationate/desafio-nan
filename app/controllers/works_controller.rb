@@ -5,7 +5,6 @@ class WorksController < ApplicationController
     @work = Work.new
   end
   
-
   def create
     work = Work.new(work_params)
     work.proyect = @proyect
@@ -13,10 +12,14 @@ class WorksController < ApplicationController
     if work.save
       redirect_to @proyect, notice: 'Se ha añadido un trabajador al proyecto'
     else
-      redirect_to new_proyect_person_work_path(@proyect, @person), alert:'Hubo un error, intente nuevamente.'
+      redirect_to new_proyect_person_work_path(@proyect, @person), alert: 'Hubo un error, intente nuevamente.'
     end
   end
 
+  def destroy
+    work = Work.
+  end
+  
   private
 
   def set_proyect

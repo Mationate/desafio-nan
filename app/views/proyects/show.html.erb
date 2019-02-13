@@ -17,3 +17,33 @@
 
 <%= link_to 'Edit', edit_proyect_path(@proyect) %> |
 <%= link_to 'Back', proyects_path %>
+
+<br><br>
+<h1>Current workers</h1>
+<br>
+    <% @current_works.each do |c_worker|  %>
+        <div class="row">
+          <div class="col-2"><%= c_worker.person.name %></div>
+          <div class="col-2"><%= c_worker.person.email %></div>
+          <div class="col-1"><%= c_worker.fee %></div>
+          <div class="col-2"><%= c_worker.start_date %></div>
+          <div class="col-2"><%= c_worker.finish_date %></div>
+          <div class="col-2"><%= c_worker.person.ocupation %></div>
+          <div class="col-1"><%= link_to 'Eliminar', root_path, class:'btn btn-danger btn-sm' %></div>
+          <hr>
+        </div>
+    <% end %>
+
+<br>
+<h1>Inactive workers</h1>
+<br>
+
+    <% @inactive_works.each do |i_worker| %>
+      <div class="row">
+        <div class="col-4"><%= i_worker.name %></div>
+        <div class="col-4"><%= i_worker.email %></div>
+        <div class="col-4"><%= link_to 'Add', new_proyect_person_work_path(@proyect, i_worker), class:'btn btn-success btn-sm' %></div>
+        <hr>
+      </div>
+
+    <% end %>

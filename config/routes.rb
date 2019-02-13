@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :proyects do
     resources :people, only: [] do
-      resources :works, only: %i[create new]
+      resources :works, only: %i[create new destroy]
     end
   end
   resources :people
