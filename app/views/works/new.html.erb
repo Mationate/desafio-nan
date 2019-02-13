@@ -1,0 +1,24 @@
+<h1>Add person to project</h1>
+
+<%= form_with(model:[@proyect, @person, @work], local:true) do |f| %>
+  <div class="form-group">
+    <%= f.label :fee, "fee" %>
+    <%= f.number_field :fee, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :start_date, "start date" %>
+    <%= f.text_field :start_date, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :finish_date, "finish date" %>
+    <%= f.text_field :finish_date, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Send", class:'btn btn-outline-success' %>
+  </div>
+<% end %>
+
+
