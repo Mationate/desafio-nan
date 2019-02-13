@@ -16,3 +16,14 @@
 </p>
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
+
+<br>
+<h1>Proyectos asociados:</h1>
+<% @proyects.each do |proyect| %>
+  <div class="row">
+    <div class="col-4"><%= proyect.name %></div>
+    <div class="col-4"><%= proyect.description %></div>
+    <div class="col-4"><%= link_to 'Ir al proyecto', proyect_path(proyect), class:'btn btn-info btn-sm' %></div>  
+  </div>
+<% end %>
+

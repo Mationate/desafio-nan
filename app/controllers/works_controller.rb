@@ -17,7 +17,9 @@ class WorksController < ApplicationController
   end
 
   def destroy
-    work = Work.
+    work = Work.find(params[:id])
+    work.destroy
+    redirect_to @proyect, notice: 'Has eliminado a esta persona del proyecto'
   end
   
   private
