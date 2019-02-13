@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person: one
+  proyect: one
+  fee: 1
+  finished: false
+  start_date: MyString
+  finish_date: MyString
+
+two:
+  person: two
+  proyect: two
+  fee: 1
+  finished: false
+  start_date: MyString
+  finish_date: MyString
